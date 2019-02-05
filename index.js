@@ -1,3 +1,5 @@
+'use strict'
+
 const btnReset = document.getElementById('btnReset');
 const btnReverse = document.getElementById('btnReverse');
 const btnPause = document.getElementById('btnPause');
@@ -5,25 +7,34 @@ const btnStart = document.getElementById('btnStart');
 
 const testBlock = document.getElementById('testBlock');
 
-
-
-
-
+const widthAnimationConfig = {
+  default: 300,
+  from: 0,
+  to: 600,
+  unit: 'px',
+  property: 'width'
+}
+const animation1 = new SimpleAnimation(widthAnimationConfig, 2000);
+animation1.setTarget(testBlock);
 
 // Configure bottom buttons
-onReset = (e) => {
+const onReset = (e) => {
+  animation1.reset();
   console.log('Reset click');
 }
 
-onReverse = (e) => {
+const onReverse = (e) => {
+  animation1.reverse();
   console.log('Reverse click');
 }
 
-onPause = (e) => {
+const onPause = (e) => {
+  animation1.stop();
   console.log('Pause click');
 }
 
-onStart = (e) => {
+const onStart = (e) => {
+  animation1.start();
   console.log('Start click');
 }
 
