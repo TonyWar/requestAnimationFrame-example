@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="menu--left">
+      <div>
+        <input type="checkbox" id="widthAnimation" name="widthAnimation" checked>
+        <label for="widthAnimation">width animation</label>
+      </div>
+      <div>
+        <input type="checkbox" id="borderAnimation" name="borderAnimation" checked>
+        <label for="borderAnimation">border animation</label>
+      </div>
+      <div>
+          <input type="checkbox" id="heightAnimation" name="heightAnimation" checked>
+          <label for="heightAnimation">height animation</label>
+        </div>
+    </div>
+    <div class="scene-wrapper">
+      <div class="scene">
+        <div id="testBlock">
+          <div class="block">Hello World!</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="btn" id="btnReset">Reset</button>
+        <button class="btn" id="btnReverse">Reverse</button>
+        <button class="btn" id="btnPause">Pause</button>
+        <button class="btn" id="btnStart">Start</button>
+      </div>
+    </div>
+  </div>
+  <script src="./simple-animation.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
