@@ -14,7 +14,7 @@ const widthAnimationConfig = {
   unit: 'px',
   property: 'width'
 }
-const animation1 = new SimpleAnimation(widthAnimationConfig, 2000);
+const animation1 = new SimpleAnimation(widthAnimationConfig, 2000, true);
 animation1.setTarget(testBlock);
 
 // Configure bottom buttons

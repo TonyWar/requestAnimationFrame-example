@@ -1,5 +1,5 @@
 class SimpleAnimation {
-  constructor(config, duration = 2000) {
+  constructor(config, duration = 2000, infinity = false) {
     // requestAnimationFrame can not be 0
     this.id = 0;
     this.startTime = 0;
@@ -13,6 +13,8 @@ class SimpleAnimation {
     this.toValue = config.to || 100;
     this.unit = config.unit || 'px';
     this.property = config.property || 'width';
+
+    this.isInfinity = infinity;
   }
 
   setTarget = (target) => {
@@ -53,6 +55,8 @@ class SimpleAnimation {
     console.log(`animaion works...${Math.ceil(timePassed / this.duration * 100)}%`, );
     if (timePassed < this.duration) {
       this.id = requestAnimationFrame(this.animation);
+    } else if (this.isInfinity) {
+      this.isReverse ? this.start() : this.reverse();
     }
   }
 
