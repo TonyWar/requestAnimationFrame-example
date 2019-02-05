@@ -52,7 +52,7 @@ class SimpleAnimation {
 
     // do some animation there
     this.makeFrame(Math.ceil(timePassed / this.duration * 100) / 100);
-    console.log(`animaion works...${Math.ceil(timePassed / this.duration * 100)}%`, );
+    // console.log(`animaion works...${Math.ceil(timePassed / this.duration * 100)}%`);
     if (timePassed < this.duration) {
       this.id = requestAnimationFrame(this.animation);
     } else if (this.isInfinity) {
